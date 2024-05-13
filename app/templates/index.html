@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+    <title>Character and Word Counter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Character and Word Counter</h1>
+                <textarea id="input_text" class="form-control" rows="4" oninput="updateCounts()"></textarea>
+                <div class="row justify-content-center mt-3">
+                    <div class="col-auto">
+                        <p id="character_count" class="mb-0 mr-3"><strong>Characters:</strong> 0</p>
+                    </div>
+                    <div class="col-auto">
+                        <p id="word_count" class="mb-0"><strong>Words:</strong> 0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <footer class="footer mt-auto py-3"></footer>
+</body>
+</html>
